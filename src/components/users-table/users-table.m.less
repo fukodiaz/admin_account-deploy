@@ -1,0 +1,106 @@
+.tableUsers {
+	margin-bottom: 19px;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.rowTheadUsers {
+	border-bottom: 2px solid rgba(0,0,0, .8);
+
+	& th {
+		box-sizing: border-box;
+		padding-bottom: 2px;
+		text-align: center;
+		font-size: 15px;
+		color: rgba(0,0,0, .8);
+	}
+}
+
+.rowTbodyUser {
+	& td {
+		box-sizing: border-box;
+		padding-top: 3px;
+		padding-bottom: 2px;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 700;
+		color: rgba(0,0,0, .7);
+	}
+
+	&:first-child {
+		& td {
+			padding-top: 12px;
+		}
+	}
+	&:not(:first-child) {
+		& .userActions {
+			padding-top: 8px !important;
+		}
+	}
+}
+
+.userIndex {
+	padding-left: 12px;
+	text-align: left !important;
+}
+
+.userHindex {
+	padding-left: 12px;
+	width: 30px;
+	text-align: left !important;
+}
+
+.userHFIO {
+	padding-left: 95px;
+	width: 235px;//260px;
+	text-align: left !important;
+}
+
+.userFIO {
+	padding-left: 28px;
+	text-align: left !important;
+}
+
+.userHdepartment {
+	//padding-left: 12px;
+	width: 260px;
+	text-align: center !important;
+}
+
+.userDepartment {
+	//padding-left: 18px;
+	text-align: center !important;
+}
+
+.userHphone, .userHpassword {
+	width: 140px;
+}
+
+.userHemail {
+	width: 175px;
+}
+
+.userEmail {
+	text-decoration: 1px solid underline;
+}
+
+.userHactions {
+	width: 185px;
+}
+
+.userActions {
+	padding-top: 16px !important;
+}
+
+.svgBoxEditing, .svgBoxDel {
+	width: 18px;
+	height: 18px;
+	color: rgba(0,0,0, .8);;
+	&:hover {
+		color: rgba(0,0,0, .5);;
+	}
+}
+
+.buttonEditing {
+	margin-right: 5px;
+}

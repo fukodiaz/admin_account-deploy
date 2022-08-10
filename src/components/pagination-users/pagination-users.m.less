@@ -1,0 +1,132 @@
+.wrapperPagination {
+	display: flex;
+	padding-bottom: 100px;//143px;//167px;
+}
+
+.boxPagination {
+	display: flex;
+	align-items: flex-start;
+	margin-right: auto;
+}
+
+.itemBtnArrow {
+	margin-right: 5px;
+}
+
+.pagination {
+	display: flex;
+	align-items: flex-start;
+}
+
+.itemBtnMain {
+	margin-right: 5px;
+}
+
+.btnMain {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 6px;
+	padding-bottom: 7px;
+	min-width: 21px;
+	height: 19px;
+	font-size: 14px;
+	color: #222;
+	border-radius: 2px;
+	background-color: rgba(160, 158, 158, 0.4);
+	&:hover, &:focus {
+		color: #fff;
+		background-color: rgb(5, 87, 170);
+	}
+}
+
+.btnEllipsis {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 2px;
+	padding-bottom: 7px;
+	min-width: 21px;
+	height: 19px;
+	font-size: 12px;
+	color: #222;
+	border-radius: 2px;
+	background-color: rgba(160, 158, 158, 0.4);
+	&:hover, &:focus {
+		color: #fff;
+		background-color: rgba(5, 87, 170, .5);
+	}
+}
+
+.activeBtnMain {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 6px;
+	padding-bottom: 7px;
+	min-width: 21px;
+	height: 19px;
+	font-size: 14px;
+	color: #fff;
+	border-radius: 2px;
+	background-color: rgb(5, 87, 170);
+	&:hover, &:focus {
+		color: #fff;
+		background-color: rgba(5, 87, 170, .7);
+	}
+}
+
+.btnArrowPrev, .btnArrowNext {
+	// display: flex;
+	// align-items: center;
+	// justify-content: center;
+	//padding: 2px 2px;
+	//padding-bottom: 2px;
+	min-width: 21px;
+	height: 19px;
+	border-radius: 2px;
+	background-color: rgba(160, 158, 158, 0.4);
+	&:hover {
+		background-color: rgb(5, 87, 170);
+		color: #fff;
+	}
+	&:focus {
+		background-color: rgba(5, 87, 170, .8);
+		color: #fff;
+	}
+	&:disabled {
+		background-color: rgba(160, 158, 158, .1);
+		outline: 1px solid rgba(160, 158, 158, .3);
+		outline-offset: -1px;
+		color:rgba(160, 158, 158, 1);
+	}
+}
+
+.btnArrowNext {	
+	padding-right: 0px;
+}
+
+
+.svgBoxPrev, .svgBoxNext {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 1px 2px;
+	padding-bottom: 3px;
+	color: rgba(0,0,0,.4);
+	&:hover, &:focus {
+		color: inherit;
+	}
+}
+
+.svgBoxPrev {
+	width: 19px;
+	height: 18px;
+}
+
+.svgBoxNext {
+	padding-right: 0px;
+	width: 22px;
+	height: 18px;
+}

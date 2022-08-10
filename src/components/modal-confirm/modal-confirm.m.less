@@ -1,0 +1,77 @@
+.modalConfirm {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1050;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0,0,0, 0.5)
+
+}
+
+.modalNewsDialog {
+	position: absolute;
+	min-width: 445px; //290px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 60px;
+	//margin: 40px auto;
+}
+
+.modalNewsContent {
+	position: relative;
+	box-sizing: border-box;
+	padding: 32px 54px 25px; //45px 28px 21px;
+	//padding-top: 45px;
+	width: 100%;
+	max-height:90vh;
+	overflow-y: auto;
+	background-color:#fff;
+	border:1px solid rgba(0,0,0,.2);
+	border-radius: 4px;
+	box-shadow:0 1px 9px rgba(0,0,0,.4);
+}
+
+.headingModal {
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 23px;
+	line-height: 29px;
+	color: rgba(0,0,0, 0.7);
+}
+
+
+.boxButtons {
+	display: flex;
+}
+
+.btnConfirm, .btnCancel {
+	display: inline-flex;
+	align-items: center;
+	padding: 0px 9px;
+	min-height: 24px;
+	font-size: 15px;
+	color: #fff;
+	border-radius: 2px;
+} 
+
+.btnConfirm {
+	margin-left: auto;
+	padding: 0 22px;
+	padding-bottom: 1px;
+	background-color: #e45050;
+	&:hover {
+		background-color: rgba(226, 79, 79, 0.8);
+	}
+}
+
+.btnCancel {
+	margin-left: 14px;
+	padding: 0 15px;
+	background-color: rgba(116, 114, 114, 0.35);
+	&:hover {
+		background-color: rgba(104, 95, 95, 0.25);
+	}
+}

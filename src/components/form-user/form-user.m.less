@@ -1,0 +1,85 @@
+.headingFormUser {
+	margin-bottom: 41px;//34px;
+	text-align: center;
+	font-size: 21px;
+	line-height: 26px;
+	color: #174472;
+}
+
+.boxInputsUser {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 21px;//2px;
+}
+
+.inputFIOUser, .inputEmailUser, 
+.inputPhoneUser, .inputPasswordUser {
+	display: block;
+	//margin-bottom: 27px;
+	box-sizing: border-box;
+	padding: 14px 7px;
+	padding-left: 11px;
+	width: 100%;//44%;
+	height: 38px;//28px;
+	font-size: 15px;
+	border-radius: 3px;
+	border: 1px solid rgba(160, 158, 158, 0.7);
+	background-color: transparent;
+	outline: none;
+
+	&:hover {
+		//border-color: rgba(138, 136, 136, 0.9);
+		border-color: rgba(138, 136, 136, 0.4);
+		outline:1px solid rgba(138, 136, 136, 0.4);
+		outline-offset: -2px;
+	}
+	&:focus {
+		//border-color: rgba(148, 148, 241, 0.5);
+		border:1px solid rgba(23, 135, 247, 0.4);
+		outline:1px solid rgba(23, 135, 247, 0.4);
+		outline-offset: -2px;
+	}
+}
+
+.containerInputFIO, .containerSelectPosition,
+.containerInputEmail, .containerInputPhone,
+.containerSelectDepartment, .containerInputPassword {
+	margin-bottom: 27px;
+	width: 44%;
+	border-radius: 3px;
+}
+
+.containerInputFIO, .containerSelectPosition, 
+.containerInputEmail, .containerSelectDepartment {
+	position: relative;
+	&::after {
+		content: '*';
+		position: absolute;
+		right: -16px;
+		top: -7px;
+		font-size: 20px;
+		color: blue;
+	}
+}
+
+.boxBtnsFormUser {
+	display: flex;
+	justify-content: center;
+}
+
+.btnSubmitFormUser {
+	display: inline-flex;
+	align-items: center;
+	margin: 0 auto;
+	padding: 3px 26px;
+	padding-bottom: 5px;
+	height: 32px;
+	font-size: 17px;
+	color: #fff;
+	border-radius: 2px;
+	background-color: rgb(5, 87, 170);
+	&:hover, &:focus {
+		background-color: rgba(5, 87, 170, .7);
+	}
+}

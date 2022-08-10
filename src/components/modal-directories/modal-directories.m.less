@@ -1,0 +1,120 @@
+.modalDirectories {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1050;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: rgba(0,0,0, 0.5)
+
+}
+
+.modalNewsDialog {
+	position: absolute;
+	max-width: 1200px; //290px;
+	min-width: 700px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 40px;
+	//margin: 40px auto;
+}
+
+.modalNewsContent {
+	position: relative;
+	box-sizing: border-box;
+	padding: 19px 27px 28px; //45px 28px 21px;
+	//padding-top: 45px;
+	width: 100%;
+	max-height:90vh;
+	overflow-y: auto;
+	background-color:#fff;
+	border:1px solid rgba(0,0,0,.2);
+	border-radius: 4px;
+	box-shadow:0 1px 9px rgba(0,0,0,.4);
+}
+
+.itemLabel, .itemInput {
+	margin-bottom: 15px !important;
+	&:last-child {
+		margin-bottom: 0 !important;
+	}
+}
+
+.labelTitle {
+	display: inline-flex;
+	align-items: center;
+	width: 131px;
+	height: 34px;
+	border-radius: 3px;
+	background-color: rgba(236, 233, 233, 0.7);
+	outline: 2px solid rgba(204, 201, 201, .2);
+	outline-offset: -2px;
+	cursor: pointer;
+
+	& span {
+		display: block;
+		margin-left: 15px;
+		font-size: 15px;
+		color: rgba(0,0,0, .8);
+	}
+
+	&:hover, &:focus {
+		background-color: rgba(236, 233, 233, .5);
+	}
+}
+
+.inputTitle {
+	box-sizing: border-box;
+	padding: 14px 9px;
+	width: 100%;
+	height: 34px;
+	font-size: 14px;
+	border-radius: 3px;
+	border: 1px solid rgba(160, 158, 158, 0.7);
+	background-color: transparent;
+	outline: none;
+	
+	&:hover {
+		border-color: rgba(138, 136, 136, 0.4);
+		outline:1px solid rgba(138, 136, 136, 0.4);
+		outline-offset: -2px;
+	}
+	&:focus {
+		border:1px solid rgba(23, 135, 247, 0.4);
+		outline:1px solid rgba(23, 135, 247, 0.4);
+		outline-offset: -2px;
+	}
+}
+
+.additLabel {
+	position: absolute;
+	right: 3px;
+	top: 2px;
+	font-size: 14px;
+	text-transform: capitalize;
+	color: rgb(5, 103, 201);
+
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		left: -8px;
+		top: 9px;
+		width: 1px;
+		height: 6px;
+		background-color: rgb(5, 103, 201);
+	}
+	&::after {
+		transform: rotate(90deg);
+	}
+
+	&:hover, &:focus {
+		color: rgba(5, 103, 201, 0.7);
+		&::before, &::after {
+			background-color: rgba(5, 103, 201, 0.7);
+		}
+	}
+}
+
+

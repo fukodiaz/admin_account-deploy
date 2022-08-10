@@ -1,0 +1,46 @@
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+	<symbol id="arrowNext"  viewBox="0 0 42 23">
+		<g>
+		<title>background</title>
+		<rect fill="transparent" id="canvas_background" height="25" width="44" y="-1" x="-1"/>
+		<g  fill="transparent" display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+			<rect stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+		</g>
+		</g>
+		<g>
+		<title>Layer 1</title>
+		<g fill="currentColor" stroke="null" id="svg_47">
+			<g stroke="null" transform="rotate(180 20.997417449951172,11.50001621246338) matrix(0.737655363339304,0,0,0.5607635090719031,431.1087587045729,64.97252248840623) " id="svg_44">
+			<title stroke="null" transform="translate(-0.0029787158127874136,1.7833986282348633) translate(0.00019651249749585986,-1.8717169761657715) translate(-0.0007446789531968534,-7.1316304206848145) translate(-0.00008274210267700255,0.000005701851023331983) translate(-1.3556466102600098,1.4947060346603394) translate(0.00009308486914960667,2.9894320964813232) translate(0,-1.638795256614685) translate(-132.85336303710938,-496.5549621582031) translate(-460.91986083984375,378.56170654296875) translate(14.666313171386719,0) translate(0,11.011249542236328) ">background</title>
+			<rect  stroke="null" x="-581.466074" y="-112.356606" width="51" height="34" id="svg_42" fill="transparent"/>
+			<g stroke="null" id="svg_41" display="none">
+			<rect stroke="null" id="svg_45" width="580" height="400" x="-580.466074" y="-111.356606" stroke-width="0" fill="url(#gridpattern)"/>
+			</g>
+			</g>
+			<g stroke="null" transform="rotate(180 19.631242752075195,11.000007629394533) matrix(0.7800684397998058,0,0,0.7007002973255109,455.71004548594607,77.91770659658596) " id="svg_46">
+			<title stroke="null" transform="translate(0,1.4271436929702759) translate(1.1368683772161603e-13,1.497046709060669) translate(1.1368683772161603e-13,-3.147434949874878) translate(0,-1.4261993169784546) translate(0.00002934125041065272,-0.000002853378873624024) translate(-0.00001467062520532636,-2.991987466812134) translate(-0.00006846291944384575,-2.723066806793213) translate(-2.5637259483337402,-0.000011403702046663966) translate(-1.000083088874817,0.000011403702046663966) translate(-1.3556466102600098,1.4947060346603394) translate(0.00009308486914960667,2.9894320964813232) translate(0,-1.638795256614685) translate(-132.85336303710938,-496.5549621582031) translate(-460.91986083984375,378.56170654296875) translate(14.666313171386719,0) translate(0,11.011249542236328) ">Layer 1</title>
+			<g stroke="null" id="svg_23">
+			<g stroke="null" id="svg_39" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) ">
+				<path stroke="null" d="m-4848.651518,-876.843173l-323.572,0l77.209,-77.214c6.764,-6.75999 6.764,-17.726 0,-24.485c-6.764,-6.764 -17.73,-6.764 -24.484,0l-106.768,106.77c-6.764,6.76 -6.764,17.727 0,24.48501l106.768,106.775c3.381,3.383 7.812,5.072 12.242,5.072c4.43,0 8.861,-1.689 12.242,-5.072c6.764,-6.76 6.764,-17.726 0,-24.484l-77.209,-77.218l323.572,0c9.562,0 17.316,-7.753 17.316,-17.315c0,-9.562 -7.753,-17.314 -17.316,-17.314l0,-0.00001z" id="svg_40"/>
+			</g>
+			<g stroke="null" id="svg_38" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_37" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_36" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_35" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_34" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_33" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_32" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_31" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_30" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_29" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_28" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_27" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_26" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_25" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			<g stroke="null" id="svg_24" transform="matrix(0.1111088925048529,0,0,0.1111088925048529,0,0) "/>
+			</g>
+			</g>
+		</g>
+		</g>
+	</symbol>
+</svg>

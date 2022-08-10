@@ -1,0 +1,45 @@
+.listBtnsOffices {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: 450px;
+	//margin-bottom: 25px;
+}
+
+.itemListBtns {
+	margin-right: 17px;
+	margin-bottom: 1px;
+}
+
+.btnOffice {
+	font-size: 15px;
+	font-weight: 700;
+	color: rgba(12, 45, 78, 0.9);
+	&:hover, &:focus {
+		color: rgba(12, 45, 78, 0.6);
+	}
+}
+
+.activeBtnOffice {
+	position: relative;
+	font-size: 15px;
+	font-weight: 700;
+	color: rgb(5, 87, 170);
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -3px;
+		height: 2px;
+		width: 100%;
+		border-radius: 2px;
+		background-color: rgb(5, 87, 170);
+	}
+
+	&:hover, &:focus {
+		color: rgba(5, 87, 170, .7);
+		&::after {
+			background-color: rgba(5, 87, 170, .7);
+		}
+	}
+}

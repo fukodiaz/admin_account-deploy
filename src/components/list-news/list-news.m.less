@@ -1,0 +1,67 @@
+.listNews {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 29px;
+	padding-bottom: 12px;
+	border-top: 1px solid rgba(116, 114, 114, 0.2);
+	
+	//background-color: rgba(116, 114, 114, 0.2);
+}
+
+.boxAdditional {
+	margin-top: 8px;
+	margin-bottom: 7px;
+	margin-left: 77px;
+	margin-right: auto;
+	width: 77px;
+	height: 77px;
+}
+
+
+.containerNews {
+	position: relative;
+}
+
+.btnCreateNews {
+	position: absolute;
+	top: -23px;
+	right: 15px;
+	font-size: 14px;
+	color: rgba(23, 68, 114, 1);
+
+	&::before, &::after {
+		content: '';
+		position: absolute;
+		left: -9px;
+		width: 2px;
+		height: 8px;
+		background-color: rgba(23, 68, 114, 1);
+	}
+
+	&::before {
+		top: 5px;
+	}
+
+	&::after {
+		top: 5px;
+		transform: rotate(90deg);
+	}
+
+	&:hover {
+		color: rgba(23, 68, 114, 0.7);
+		&::before, &::after {
+			background-color: rgba(23, 68, 114, 0.7);
+		}
+	}
+}
+
+.btnShowAllNews {
+	position: absolute;
+	bottom: 12px;
+	right: 15px;
+	font-size: 15px;
+	color: rgb(5, 103, 201);
+	&:hover {
+		color: rgba(5, 103, 201, 0.7);
+	}
+}

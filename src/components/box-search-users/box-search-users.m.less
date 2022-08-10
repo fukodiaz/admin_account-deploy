@@ -1,0 +1,47 @@
+.boxSearchUsers {
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 19px;
+}
+
+.inputSearchUsers {
+	display: block;
+	padding: 14px 7px;
+	padding-left: 11px;
+	width: 355px;
+	height: 28px;
+	font-size: 14px;
+	border-radius: 3px;
+	border: 1px solid rgba(160, 158, 158, 0.7);
+	background-color: transparent;
+	outline: none;
+
+	&:hover {
+		//border-color: rgba(138, 136, 136, 0.9);
+		border-color: rgba(138, 136, 136, 0.4);
+		outline:1px solid rgba(138, 136, 136, 0.4);
+		outline-offset: -2px;
+	}
+	&:focus {
+		//border-color: rgba(148, 148, 241, 0.5);
+		border:1px solid rgba(23, 135, 247, 0.4);
+		outline:1px solid rgba(23, 135, 247, 0.4);
+		outline-offset: -2px;
+	}
+}
+
+.btnSearchUsers {
+	display: inline-flex;
+	align-items: center;
+	margin-left: 19px;
+	padding: 3px 20px;
+	padding-bottom: 4px;
+	height: 27px;
+	font-size: 16px;
+	color: #fff;
+	border-radius: 2px;
+	background-color: rgb(5, 87, 170);
+	&:hover, &:focus {
+		background-color: rgba(5, 87, 170, .7);
+	}
+}
