@@ -177,9 +177,9 @@ const updateUsers = (state = initialState, action) => {
 
 		case 'FILTER_OFFICES':
 			const {payload} = action;
-			let visibleUsersList = state.usersList.filter(
+			let visibleUsersList = state.usersList?.filter(
 											(user,idx,arr) => filterUsersByOffice(user, idx, arr, state, payload));
-			visibleUsersList = visibleUsersList.map(addIndexObj);
+			visibleUsersList = visibleUsersList?.map(addIndexObj);
 			const totalPaginBtns = visibleUsersList.length ? Math.ceil(visibleUsersList.length/2) : 0;
 			return {
 				...state,
@@ -203,9 +203,9 @@ const updateUsers = (state = initialState, action) => {
 			}
 
 		case 'FETCH_USERS_DATA_SUCCESS':
-			let visUsersList = action.payload.filter(
+			let visUsersList = action.payload?.filter(
 						(user,idx,arr) => filterUsersByOffice(user, idx, arr, state, state.isActiveOffice));
-			visUsersList = visUsersList.map(addIndexObj);
+			visUsersList = visUsersList?.map(addIndexObj);
 			return {
 				...state,
 				usersList: action.payload,
@@ -246,9 +246,9 @@ const updateUsers = (state = initialState, action) => {
 			}
 
 		case 'USER_DATA_SUCCESS':
-			let visualUsersList = action.payload.filter(
+			let visualUsersList = action.payload?.filter(
 				(user,idx,arr) => filterUsersByOffice(user, idx, arr, state, state.isActiveOffice));
-			visualUsersList = visualUsersList.map(addIndexObj);
+			visualUsersList = visualUsersList?.map(addIndexObj);
 			return {
 				...state,
 				usersList: action.payload,
@@ -293,9 +293,9 @@ const updateUsers = (state = initialState, action) => {
 			}
 
 		case 'PUT_USER_DATA_SUCCESS':
-			let viUsersList = action.payload.filter(
+			let viUsersList = action.payload?.filter(
 				(user,idx,arr) => filterUsersByOffice(user, idx, arr, state, state.isActiveOffice));
-			viUsersList = viUsersList.map(addIndexObj);
+			viUsersList = viUsersList?.map(addIndexObj);
 			return {
 				...state,
 				userPutInit: false,
@@ -328,9 +328,9 @@ const updateUsers = (state = initialState, action) => {
 			}
 
 		case 'DELETE_USER_SUCCESS': 
-			let vUsersList = action.payload.filter(
+			let vUsersList = action.payload?.filter(
 				(user,idx,arr) => filterUsersByOffice(user, idx, arr, state, state.isActiveOffice));
-			vUsersList = vUsersList.map(addIndexObj);
+			vUsersList = vUsersList?.map(addIndexObj);
 			return {
 				...state,
 				userDeleteInit: false,
@@ -349,10 +349,10 @@ const updateUsers = (state = initialState, action) => {
 			}
 
 		case 'ON_SEARCH_USERS':
-			const visibUsersList = state.usersList.filter(
+			const visibUsersList = state.usersList?.filter(
 				(user,idx,arr) => filterUsersByOffice(user, idx, arr, state, state.isActiveOffice));
 			let searchUsersList = searchingUsers(visibUsersList, state.searchUsers);
-			searchUsersList = searchUsersList.map(addIndexObj);
+			searchUsersList = searchUsersList?.map(addIndexObj);
 			return {
 				...state,
 				visibleUsersList: searchUsersList,
