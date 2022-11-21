@@ -17,12 +17,13 @@ const mapDataUser = (user) => {
 };
 
 router.get('/', async (req, res) => {
-	// let result = JSON.parse(await client.execute(['JSON.GET', 'usersList']));
-	// result = result ? result?.map(mapDataUser) : [];
-	const result = await client.execute(['JSON.GET', 'usersList']);
+	let result = JSON.parse(await client.execute(['JSON.GET', 'usersList']));
+	result = result ? result?.map(mapDataUser) : [];
+	//const result = await client.execute(['JSON.GET', 'usersList']);
 	
-	//res.send(JSON.stringify(result));
-	res.send(result);
+	res.send(JSON.stringify(result));
+	//console.log(result, 11);
+	//res.send(result);
 });
 
 router.post('/', async(req, res) => {
@@ -65,7 +66,7 @@ router.put('/:id', async(req, res) => {
 	const novelUsersList = [...prevUsersList.slice(0, userIndex), novelUser, ...prevUsersList.slice(userIndex + 1)];
 	await client.execute(['JSON.SET', 'usersList', '$', JSON.stringify(novelUsersList)]);
 	let novelDataUsersList = await client.execute(['JSON.GET', 'usersList']);
-	novelDataUsersList = JSON.parse(novelDataUsersList).map(mapDataUser);
+	novelDataUsersList = await JSON.parse(novelDataUsersList).map(mapDataUser);
 
 	res.send(JSON.stringify(novelDataUsersList));
 });

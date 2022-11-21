@@ -15,7 +15,7 @@ import {router as usersRouter} from './routers/users-router.mjs';
 const app = express();
 const PORT = process.env.PORT || 3001;
 const corsOptions = {
-	origin: 'https://admin-account.herokuapp.com/', //'https://admin-account.herokuapp.com/'
+	origin: 'https://admin-account.herokuapp.com/', //'https://admin-account.herokuapp.com/'  'http//localhost:8081/'
 	//credentials: true,
 	optionSuccessStatus: 200
 };

@@ -133,6 +133,7 @@ router.post('/', busboy({immediate: true}), async (req, res, next) => {
 
 router.get('/', async (req, res) => {
 	const result = await client.execute(['JSON.GET', 'newsList']);
+	console.log(result, 22);
 	res.send(result);
 });
 

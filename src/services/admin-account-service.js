@@ -1,6 +1,6 @@
 export default class AdminAccountService {
 
-	//_apiBase= 'http://localhost:3001';
+	//_apiBase= 'http://localhost:3001/api';
 	_apiBase= 'https://admin-account.herokuapp.com/api';
 
 	getResource = async (url) => {
