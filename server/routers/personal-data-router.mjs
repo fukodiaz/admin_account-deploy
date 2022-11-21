@@ -52,6 +52,7 @@ router.post('/', busboy({immediate: true}), async (req, res, next) => { //multer
 		personalData.imagePhotoType = imagePhotoType;
 
 		let id = await personalDataRepository.save(personalData);
+		
 
 		res.send(await personalDataRepository.fetch(id));
 	});
