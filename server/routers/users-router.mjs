@@ -17,10 +17,12 @@ const mapDataUser = (user) => {
 };
 
 router.get('/', async (req, res) => {
-	let result = JSON.parse(await client.execute(['JSON.GET', 'usersList']));
-	result = result ? result?.map(mapDataUser) : [];
+	// let result = JSON.parse(await client.execute(['JSON.GET', 'usersList']));
+	// result = result ? result?.map(mapDataUser) : [];
+	const result = await client.execute(['JSON.GET', 'usersList']);
 	
-	res.send(JSON.stringify(result));
+	//res.send(JSON.stringify(result));
+	res.send(result);
 });
 
 router.post('/', async(req, res) => {
