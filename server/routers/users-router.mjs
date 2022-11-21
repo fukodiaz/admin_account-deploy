@@ -18,7 +18,7 @@ const mapDataUser = (user) => {
 
 router.get('/', async (req, res) => {
 	let result = JSON.parse(await client.execute(['JSON.GET', 'usersList']));
-	result = result.map(mapDataUser);
+	result = result ? result?.map(mapDataUser) : [];
 	
 	res.send(JSON.stringify(result));
 });
