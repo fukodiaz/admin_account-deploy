@@ -1,10 +1,15 @@
 export default class AdminAccountService {
 
-	//_apiBase= 'http://localhost:3001/api';
-	_apiBase= 'https://admin-account.herokuapp.com/api';
+	_apiBase= 'http://localhost:3001';
+	//_apiBase= 'https://admin-account.herokuapp.com/api';
 
 	getResource = async (url) => {
-		const res = await fetch(`${this._apiBase}${url}`);
+		const res = await fetch(`${this._apiBase}${url}`, {
+			mode: 'cors',
+			headers: {
+				'Access-Control-Allow-Origin': '*'
+			},
+		});
 		
 		if (!res.ok) {
 			throw new Error (
