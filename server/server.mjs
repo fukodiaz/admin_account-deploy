@@ -15,7 +15,7 @@ import {router as usersRouter} from './routers/users-router.mjs';
 const app = express();
 const PORT = process.env.PORT || 3001;
 const corsOptions = {
-	origin: 'http://localhost:8081', //'http://localhost:8081'
+	origin: 'https://admin-account.vercel.app', //'http://localhost:8081'
 	//credentials: true,
 	optionSuccessStatus: 200
 };
