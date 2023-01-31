@@ -2,6 +2,7 @@ export default class AdminAccountService {
 
 	_apiBase= 'http://localhost:3001';
 	//_apiBase= 'https://admin-account.herokuapp.com/api';
+	_apiBase='https://admin-account-api.vercel.app';
 
 	getResource = async (url) => {
 		const res = await fetch(`${this._apiBase}${url}`, {
