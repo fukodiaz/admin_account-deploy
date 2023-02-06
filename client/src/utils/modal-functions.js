@@ -3,6 +3,7 @@ const openModal = (modalSelector) => {
 
 	modal.style.display = 'block';
 	document.body.style.overflow = 'hidden';
+	//document.body.style.setProperty('margin-right', 'calc(-1 * (100vw - 100%))');
 };
 
 function hideModal(modalSelector) {
