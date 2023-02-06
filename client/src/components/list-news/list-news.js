@@ -40,7 +40,7 @@ class ListNews extends Component {
 	}
 
 	render() {
-		const {showAllNews, visibleNewsList, newsListLoading, newsListError} = this.props;
+		const {showAllNews, visibleNewsList, newsListLoading, newsListError, flagAllNews} = this.props;
 		const contentListNews = visibleNewsList ? visibleNewsList.map(this.createNewsItem) : null;
 
 		if (newsListLoading) { 
@@ -62,7 +62,7 @@ class ListNews extends Component {
 				</button>
 				<button type="button" className={styles.btnShowAllNews}
 							onClick={showAllNews}>
-					Показать все новости
+					{flagAllNews ? 'Показать все новости' : 'Свернуть список новостей'}
 				</button>
 				<ModalConfirm />
 			</div>
@@ -74,8 +74,9 @@ const mapMethodsToProps = (adminAccountService) => ({
 	getNewsList: adminAccountService.getNewsList,
 });
 
-const mapStateToProps = ({news: {visibleNewsList, newsListLoading, newsListError}}) => ({
-	visibleNewsList, newsListLoading, newsListError
+const mapStateToProps = ({news: {visibleNewsList, newsListLoading, newsListError, flagAllNews}}) => ({
+	visibleNewsList, newsListLoading, 
+	newsListError, flagAllNews
 });
 
 const mapDispatchToProps = (dispatch, {getNewsList}) => ({

@@ -27,7 +27,8 @@ class ListDirectories extends Component {
 	}
 
 	render() {
-		const {visibleDirectories, directoriesLoading, directoriesError, showAllDirectories} = this.props;
+		const {visibleDirectories, directoriesLoading, directoriesError, showAllDirectories,
+				flagAllDirectories} = this.props;
 		const contentDirectoriesList = visibleDirectories ? visibleDirectories.map(this.createDirectory) : null;
 
 		if (directoriesLoading) { 
@@ -45,7 +46,7 @@ class ListDirectories extends Component {
 				</ul>
 				<button type="button" className={styles.btnShowAllDirect}
 								onClick={showAllDirectories}>
-					Показать все справочники
+					{flagAllDirectories ? 'Показать все справочники' : 'Свернуть список справочников'}
 				</button>
 			</div>
 		);
@@ -57,9 +58,11 @@ const mapMethodsToProps = (adminAccountService) => ({
 });
 
 const mapStateToProps = ({users: {directoriesList, directoriesLoading, 
-								directoriesError,visibleDirectories}}) => ({
+								directoriesError, visibleDirectories, 
+								flagAllDirectories}}) => ({
 	directoriesList, directoriesLoading, 
-	directoriesError, visibleDirectories
+	directoriesError, visibleDirectories,
+	flagAllDirectories
 });
 
 const mapDispatchToProps = (dispatch, {getDataDirectories}) => ({
