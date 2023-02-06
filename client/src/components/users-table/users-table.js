@@ -62,6 +62,7 @@ class UsersTable extends Component {
 	render() {
 		const {usersListError, visUsersList, showingUsers} = this.props;
 		const contentUsers = showingUsers ?  showingUsers.map(this.createRow) : null;
+		console.log(showingUsers, 111);
 		return (
 			<table className={styles.tableUsers}>
 				<thead>

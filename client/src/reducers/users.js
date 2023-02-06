@@ -206,6 +206,7 @@ const updateUsers = (state = initialState, action) => {
 			let visUsersList = action.payload?.filter(
 						(user,idx,arr) => filterUsersByOffice(user, idx, arr, state, state.isActiveOffice));
 			visUsersList = visUsersList?.map(addIndexObj);
+			console.log(action?.payload, 222);
 			return {
 				...state,
 				usersList: action.payload,
