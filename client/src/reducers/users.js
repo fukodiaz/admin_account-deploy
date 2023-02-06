@@ -218,6 +218,7 @@ const updateUsers = (state = initialState, action) => {
 			}
 
 		case 'FETCH_USERS_DATA_FAILURE':
+			console.log(action?.payload, 'err-users');
 			return {
 				...state,
 				usersList: null,
