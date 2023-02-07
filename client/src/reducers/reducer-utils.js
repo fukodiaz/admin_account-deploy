@@ -150,7 +150,7 @@ function defineShowingUsers(visibleListUsers, activeIdx, quantity) { //quantity 
 	// const quantityPages = Math.ceil(visibleListUsers.length/quantity);
 	if (visibleListUsers?.length) {
 		return [...visibleListUsers.slice(quantity*activeIdx, (activeIdx+1)*quantity)];
-	} else {return null;}
+	} else {return [];}
 }
 
 const addIndexObj = (item, index) => ({

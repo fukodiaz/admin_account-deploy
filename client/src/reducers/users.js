@@ -37,11 +37,11 @@ const initialState = {
 	flagShowUsers: true,
 
 	listOffices: null,
-	isActiveOffice: '',//"educational",
+	isActiveOffice: "educational",
 	currentDepartments: null,
 	listPositions: null,
 
-	usersList: null,
+	usersList: [],
 	usersListLoading: false,
 	usersListError: false,
 	visibleUsersList: [],
@@ -197,7 +197,7 @@ const updateUsers = (state = initialState, action) => {
 		case 'FETCH_USERS_DATA_REQUEST': 
 			return {
 				...state,
-				usersList: null,
+				usersList: [],
 				usersListLoading: true,
 				usersListError: false,
 				visibleUsersList: []
@@ -222,7 +222,7 @@ const updateUsers = (state = initialState, action) => {
 			console.log(action?.payload, 'err-users');
 			return {
 				...state,
-				usersList: null,
+				usersList: [],
 				visibleUsersList: [],
 				usersListLoading: false,
 				usersListError: action.payload

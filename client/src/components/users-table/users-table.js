@@ -14,7 +14,6 @@ class UsersTable extends Component {
 
 	componentDidMount() {
 		this.props.fetchUsersData();
-		this.props.filterOffices('educational');
 		
 		// if (this.props.usersList?.length) {
 		// 	this.props.filterOffices('educational');
@@ -23,7 +22,7 @@ class UsersTable extends Component {
 	}
 
 	componentDidUpdate(prevProps) {
-		if (prevProps.usersList?.length !== this.props.usersList?.length) {
+		if (!prevProps.usersList?.length && this.props.usersList?.length) {
 			console.log('dif', this.props.usersList);
 			this.props.filterOffices('educational');
 			//console.log('showing', this.props.showingUsers);
