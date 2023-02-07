@@ -148,7 +148,9 @@ function searchingUsers(listUsers, term) {
 
 function defineShowingUsers(visibleListUsers, activeIdx, quantity) { //quantity users on 1 page
 	// const quantityPages = Math.ceil(visibleListUsers.length/quantity);
-	return [...visibleListUsers.slice(quantity*activeIdx, (activeIdx+1)*quantity)];
+	if (visibleListUsers?.length) {
+		return [...visibleListUsers.slice(quantity*activeIdx, (activeIdx+1)*quantity)];
+	} else {return null;}
 }
 
 const addIndexObj = (item, index) => ({

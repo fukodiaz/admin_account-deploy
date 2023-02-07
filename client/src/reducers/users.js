@@ -181,7 +181,7 @@ const updateUsers = (state = initialState, action) => {
 			let visibleUsersList = state.usersList?.filter(
 											(user,idx,arr) => filterUsersByOffice(user, idx, arr, state, payload));
 			visibleUsersList = visibleUsersList?.map(addIndexObj);
-			const totalPaginBtns = visibleUsersList.length ? Math.ceil(visibleUsersList.length/2) : 0;
+			const totalPaginBtns = visibleUsersList?.length ? Math.ceil(visibleUsersList.length/2) : 0;
 			return {
 				...state,
 				isActiveOffice: payload,
