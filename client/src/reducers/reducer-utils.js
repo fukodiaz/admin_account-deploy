@@ -87,17 +87,17 @@ function searchTitles(listTitles, term) {
 function selectListDirect(listDirects, entityId) {
 	switch (entityId) {
 		case 'Offices': 
-			return listDirects.filter(({entityId}) => entityId === "Offices")
+			return listDirects?.filter(({entityId}) => entityId === "Offices")
 									.map(({list}) => list)[0];
 		case 'positions':
-			return listDirects.filter(({entityId}) => entityId === "positions")
+			return listDirects?.filter(({entityId}) => entityId === "positions")
 									.map(({list}) => list)[0];
 	}
 } 
 
 
 function selectCurretDepartments(listOffices, isActiveOffice) {
-	return listOffices.filter(({entityId}) => entityId === isActiveOffice)
+	return listOffices?.filter(({entityId}) => entityId === isActiveOffice)
 								.map(({listDivision, title}) => [title.toLowerCase(), ...listDivision])[0];
 }
 
