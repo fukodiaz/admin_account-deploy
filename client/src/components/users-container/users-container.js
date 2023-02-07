@@ -19,9 +19,9 @@ import styles from './users-container.m.less';
 
 class UsersContainer extends Component {
 
-	componentDidMount() {
-		this.props.fetchUsersData();
-	}
+	// componentDidMount() {
+	// 	this.props.fetchUsersData();
+	// }
 
 	addUser = () => {
 		this.props.openModalNewUser();

@@ -37,7 +37,7 @@ const initialState = {
 	flagShowUsers: true,
 
 	listOffices: null,
-	isActiveOffice: "educational",
+	isActiveOffice: '',//"educational",
 	currentDepartments: null,
 	listPositions: null,
 

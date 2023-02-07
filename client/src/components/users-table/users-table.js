@@ -25,7 +25,13 @@ class UsersTable extends Component {
 		if (prevProps.usersList !== this.props.usersList) {
 			console.log('dif', this.props.usersList);
 			this.props.filterOffices('educational');
+			//console.log('showing', this.props.showingUsers);
 			console.log('dif', this.props.usersList);
+		}
+		if (prevProps.isActiveOffice !== this.props.isActiveOffice) {
+			this.props.filterOffices('educational');
+			console.log('showing', this.props.showingUsers);
+			//console.log('dif', this.props.usersList);
 		}
 	}
 
@@ -103,10 +109,11 @@ const mapMethodsToProps = (adminAccountService) => ({
 });
 
 const mapStateToProps = ({users: {usersList, usersListError, 
-	visibleUsersList, showingUsersList}}) => ({
+	visibleUsersList, showingUsersList, isActiveOffice}}) => ({
 	usersList, usersListError,
 	visUsersList: visibleUsersList,
-	showingUsers: showingUsersList
+	showingUsers: showingUsersList,
+	isActiveOffice
 });
 
 const mapDispatchToProps = (dispatch, {getUsers}) => ({
