@@ -177,6 +177,7 @@ const updateUsers = (state = initialState, action) => {
 
 		case 'FILTER_OFFICES':
 			const {payload} = action;
+			console.log(payload, 999);
 			let visibleUsersList = state.usersList?.filter(
 											(user,idx,arr) => filterUsersByOffice(user, idx, arr, state, payload));
 			visibleUsersList = visibleUsersList?.map(addIndexObj);

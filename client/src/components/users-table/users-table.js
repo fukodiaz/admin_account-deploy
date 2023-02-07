@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {compose, withAdminAccountService} from '../hoc';
-import {fetchUsersData, openModalEditUser, addIdUserDeleted} from '../../actions';
+import {fetchUsersData, openModalEditUser, 
+			addIdUserDeleted, filterOffices} from '../../actions';
 import {openModal} from '../../utils';
 
 import styles from './users-table.m.less';
@@ -13,6 +14,12 @@ class UsersTable extends Component {
 
 	componentDidMount() {
 		this.props.fetchUsersData();
+	}
+
+	componentDidUpdate(prevProps) {
+		if (prevProps.usersList !== this.props.usersList) {
+			this.props.filterOffices('educational');
+		}
 	}
 
 	editUser = (userData) => {
@@ -98,7 +105,8 @@ const mapStateToProps = ({users: {usersList, usersListError,
 const mapDispatchToProps = (dispatch, {getUsers}) => ({
 	fetchUsersData: () => fetchUsersData(getUsers, dispatch)(),
 	openModalEditUser: (payload) => dispatch(openModalEditUser(payload)),
-	addIdUserDeleted: (id) => dispatch(addIdUserDeleted(id))
+	addIdUserDeleted: (id) => dispatch(addIdUserDeleted(id)),
+	filterOffices: (payload) => dispatch(filterOffices(payload))
 });
 
 export default compose(
