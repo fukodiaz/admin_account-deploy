@@ -21,7 +21,6 @@ class UsersContainer extends Component {
 
 	componentDidMount() {
 		this.props.fetchUsersData();
-		console.log(this.props.usersList, 4444);
 	}
 
 	addUser = () => {
