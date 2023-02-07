@@ -87,36 +87,46 @@ function searchTitles(listTitles, term) {
 function selectListDirect(listDirects, entityId) {
 	switch (entityId) {
 		case 'Offices': 
-			return listDirects?.filter(({entityId}) => entityId === "Offices")
-									.map(({list}) => list)[0];
+			if (listDirects.length) {
+				return listDirects?.filter(({entityId}) => entityId === "Offices")
+										.map(({list}) => list)[0];
+			} else {return null;}
 		case 'positions':
-			return listDirects?.filter(({entityId}) => entityId === "positions")
-									.map(({list}) => list)[0];
+			if (listDirects.length) {
+				return listDirects?.filter(({entityId}) => entityId === "positions")
+										.map(({list}) => list)[0];
+			} else {return null;}
+		default:
+			return null;
 	}
 } 
 
 
 function selectCurretDepartments(listOffices, isActiveOffice) {
-	return listOffices?.filter(({entityId=''}) => entityId === isActiveOffice)
-								?.map(({listDivision, title}) => [title.toLowerCase(), ...listDivision])[0];
+	if (listOffices.length) {
+		return listOffices?.filter(({entityId=''}) => entityId === isActiveOffice)
+									?.map(({listDivision, title}) => [title.toLowerCase(), ...listDivision])[0];
+	} else {return null;}
 }
 
 function defineActiveOffice({listOffices}, department) {
-	return listOffices?.filter(office => { //return obj with an active Office
-		let {title, listDivision} = office;
-		listDivision = [title.toLowerCase(), ...listDivision];
-		let flagOffice = listDivision.some(label => label === department);
-		if (flagOffice) {
-			return office;
-		}
-		return null;
-	})[0];
+	if (listOffices.length) {
+		return listOffices?.filter(office => { //return obj with an active Office
+			let {title, listDivision} = office;
+			listDivision = [title.toLowerCase(), ...listDivision];
+			let flagOffice = listDivision.some(label => label === department);
+			if (flagOffice) {
+				return office;
+			}
+			return null;
+		})[0];
+	} else {return null;}
 }
 
 const filterUsersByOffice = (user, idx, arr, state, isActiveOffice) => {
 	const {department} = user;
 	const activeOffice = defineActiveOffice(state, department);
-	if (isActiveOffice === activeOffice.entityId) {
+	if (isActiveOffice === activeOffice?.entityId) {
 		return user;
 	}
 	return null;
