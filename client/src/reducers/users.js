@@ -97,8 +97,8 @@ const updateUsers = (state = initialState, action) => {
 				directoriesList: action.payload,
 				directoriesLoading: false,
 				directoriesError: false,
-				visibleDirectories: defineVisibleItems(flagAllDirectories, action.payload, 2),
-				flagAllDirectories: !flagAllDirectories,
+				visibleDirectories: defineVisibleItems(false, action.payload, 2),
+				flagAllDirectories: true,
 				listOffices,
 				currentDepartments: selectCurretDepartments(listOffices, isActiveOffice),
 				listPositions: selectListDirect(action.payload, 'positions')

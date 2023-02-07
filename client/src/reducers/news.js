@@ -118,8 +118,8 @@ const updateNews = (state = initialState, action) => {
 				newsList: action.payload,
 				newsListLoading: false,
 				newsListError: false,
-				visibleNewsList: defineVisibleItems(flagAllNews, action.payload, 3),
-				flagAllNews: !state.flagAllNews
+				visibleNewsList: defineVisibleItems(false, action.payload, 3),
+				flagAllNews: true
 			}
 
 		case 'FETCH_NEWS_LIST_FAILURE':
