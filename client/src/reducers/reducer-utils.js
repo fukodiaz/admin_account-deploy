@@ -97,8 +97,8 @@ function selectListDirect(listDirects, entityId) {
 
 
 function selectCurretDepartments(listOffices, isActiveOffice) {
-	return listOffices?.filter(({entityId}) => entityId === isActiveOffice)
-								.map(({listDivision, title}) => [title.toLowerCase(), ...listDivision])[0];
+	return listOffices?.filter(({entityId=''}) => entityId === isActiveOffice)
+								?.map(({listDivision, title}) => [title.toLowerCase(), ...listDivision])[0];
 }
 
 function defineActiveOffice({listOffices}, department) {
