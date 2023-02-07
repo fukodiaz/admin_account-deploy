@@ -102,7 +102,7 @@ function selectCurretDepartments(listOffices, isActiveOffice) {
 }
 
 function defineActiveOffice({listOffices}, department) {
-	return listOffices.filter(office => { //return obj with an active Office
+	return listOffices?.filter(office => { //return obj with an active Office
 		let {title, listDivision} = office;
 		listDivision = [title.toLowerCase(), ...listDivision];
 		let flagOffice = listDivision.some(label => label === department);
