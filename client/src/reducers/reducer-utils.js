@@ -87,12 +87,12 @@ function searchTitles(listTitles, term) {
 function selectListDirect(listDirects, entityId) {
 	switch (entityId) {
 		case 'Offices': 
-			if (listDirects.length) {
+			if (listDirects?.length) {
 				return listDirects?.filter(({entityId}) => entityId === "Offices")
 										.map(({list}) => list)[0];
 			} else {return null;}
 		case 'positions':
-			if (listDirects.length) {
+			if (listDirects?.length) {
 				return listDirects?.filter(({entityId}) => entityId === "positions")
 										.map(({list}) => list)[0];
 			} else {return null;}
@@ -103,14 +103,14 @@ function selectListDirect(listDirects, entityId) {
 
 
 function selectCurretDepartments(listOffices, isActiveOffice) {
-	if (listOffices.length) {
+	if (listOffices?.length) {
 		return listOffices?.filter(({entityId=''}) => entityId === isActiveOffice)
 									?.map(({listDivision, title}) => [title.toLowerCase(), ...listDivision])[0];
 	} else {return null;}
 }
 
 function defineActiveOffice({listOffices}, department) {
-	if (listOffices.length) {
+	if (listOffices?.length) {
 		return listOffices?.filter(office => { //return obj with an active Office
 			let {title, listDivision} = office;
 			listDivision = [title.toLowerCase(), ...listDivision];
