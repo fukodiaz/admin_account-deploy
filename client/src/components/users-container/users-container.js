@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import {compose, withAdminAccountService} from '../hoc';
 import {filterOffices, openModalNewUser, inputChanged,
 			onSearchUsers, onBtnArrow, onBtnPagin,
-			onLastBtnPagin, selectChanged} from '../../actions'; 
+			onLastBtnPagin, selectChanged, fetchUsersData} from '../../actions'; 
 import {openModal} from '../../utils';
 
 import ListBtnsOffices from '../list-btns-offices';
@@ -17,6 +18,11 @@ import ErrorIndicator from '../error-indicator';
 import styles from './users-container.m.less';
 
 class UsersContainer extends Component {
+
+	componentDidMount() {
+		this.props.fetchUsersData();
+		console.log(this.props.usersList, 4444);
+	}
 
 	addUser = () => {
 		this.props.openModalNewUser();
@@ -54,6 +60,10 @@ class UsersContainer extends Component {
 	}
 }
 
+const mapMethodsToProps = (adminAccountService) => ({
+	getUsers: adminAccountService.getUsers,
+});
+
 const mapStateToProps = ({users: {listOffices, isActiveOffice, searchUsers, 
 	visibleUsersList, startPagin, activeIdxPagin, curSelectedPage, 
 	totalPaginBtns, flagShowUsers}}) => ({
@@ -65,8 +75,9 @@ const mapStateToProps = ({users: {listOffices, isActiveOffice, searchUsers,
 	totalPaginBtns
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch, {getUsers}) => ({
 	filterOffices: (id) => dispatch(filterOffices(id)),
+	fetchUsersData: () => fetchUsersData(getUsers, dispatch)(),
 	openModalNewUser: () => dispatch(openModalNewUser()),
 	inputChanged: (fieldName, value) => dispatch(inputChanged(fieldName, value)),
 	onSearch: () => dispatch(onSearchUsers()),
@@ -76,4 +87,7 @@ const mapDispatchToProps = (dispatch) => ({
 	selectChanged: (payload, name, start) => dispatch(selectChanged(payload, name, start))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
+export default compose(
+	withAdminAccountService(mapMethodsToProps),
+	connect(mapStateToProps, mapDispatchToProps)
+)(UsersContainer);

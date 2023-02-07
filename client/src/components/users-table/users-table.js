@@ -12,15 +12,15 @@ import trash from './trash.svg';
 
 class UsersTable extends Component {
 
-	componentDidMount() {
-		this.props.fetchUsersData();
+	// componentDidMount() {
+	// 	this.props.fetchUsersData();
 		
-		console.log(this.props.usersList, 4444);
-		// if (this.props.usersList?.length) {
-		// 	this.props.filterOffices('educational');
-		// 	console.log(78);
-		// }
-	}
+	// 	console.log(this.props.usersList, 4444);
+	// 	// if (this.props.usersList?.length) {
+	// 	// 	this.props.filterOffices('educational');
+	// 	// 	console.log(78);
+	// 	// }
+	// }
 
 	componentDidUpdate(prevProps) {
 		if (prevProps.usersList !== this.props.usersList) {
