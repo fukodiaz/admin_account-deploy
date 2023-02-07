@@ -177,7 +177,6 @@ const updateUsers = (state = initialState, action) => {
 
 		case 'FILTER_OFFICES':
 			const {payload} = action;
-			console.log(payload, 999);
 			let visibleUsersList = state.usersList?.filter(
 											(user,idx,arr) => filterUsersByOffice(user, idx, arr, state, payload));
 			visibleUsersList = visibleUsersList?.map(addIndexObj);
@@ -207,7 +206,7 @@ const updateUsers = (state = initialState, action) => {
 			let visUsersList = action.payload?.filter(
 						(user,idx,arr) => filterUsersByOffice(user, idx, arr, state, state.isActiveOffice));
 			visUsersList = visUsersList?.map(addIndexObj);
-			console.log(action?.payload, 222);
+
 			return {
 				...state,
 				usersList: action.payload,
@@ -219,7 +218,6 @@ const updateUsers = (state = initialState, action) => {
 			}
 
 		case 'FETCH_USERS_DATA_FAILURE':
-			console.log(action?.payload, 'err-users');
 			return {
 				...state,
 				usersList: [],

@@ -14,25 +14,6 @@ class UsersTable extends Component {
 
 	componentDidMount() {
 		this.props.fetchUsersData();
-		
-		// if (this.props.usersList?.length) {
-		// 	this.props.filterOffices('educational');
-		// 	console.log(78);
-		// }
-	}
-
-	componentDidUpdate(prevProps) {
-		if (!prevProps.usersList?.length && this.props.usersList?.length) {
-			console.log('dif', this.props.usersList);
-			this.props.filterOffices('educational');
-			//console.log('showing', this.props.showingUsers);
-			console.log('dif', this.props.usersList);
-		}
-		// if (prevProps.isActiveOffice !== this.props.isActiveOffice) {
-		// 	this.props.filterOffices('educational');
-		// 	console.log('showing', this.props.showingUsers);
-		// 	//console.log('dif', this.props.usersList);
-		// }
 	}
 
 	editUser = (userData) => {
